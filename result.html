@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Form Submission</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" type="text/css">
+  <link rel='stylesheet' href = "contact_style.css" type="text/css">
+  <style>
+  body {
+      background-image: url('img/i3.jpg');
+      background-size: cover;
+      background-position: center;}
+  </style>
+</head>
+
+
+<body>
+    <header>
+        <h3 class="logo">Logo</h3>
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact Us</a>
+        </nav>
+    </header>
+
+
+    <div style="" class="result-container">
+      <h3><b>Thank you, <span id="fullName"></span>!</b></h3>
+      <p>You have submitted the following details:</p>
+      <p><b>Date of Birth:</b> <span id="dob"></span></p>
+      <p><b>Telephone:</b> <span id="telephone"></span></p>
+      <p><b>File Uploaded:</b> <span id="fileUpload"></span></p>
+      <!--<p><b>Email:</b> <span id="email"></span></p>-->
+      <p><b>Message:</b> <span id="message"></span></p>
+      <button class="back-button" onclick="window.location.href='contact.html'">Back</button>
+    </div>
+
+  
+  
+  <script>
+    // Get data from localStorage
+    var title = localStorage.getItem("title");
+    var firstName = localStorage.getItem("firstName");
+    var lastName = localStorage.getItem("lastName");
+    var dob = localStorage.getItem("dob");
+    var telephone = localStorage.getItem("telephone");
+    //var email = localStorage.getItem("email");
+    var fileUpload = localStorage.getItem("fileUpload");
+    var message = localStorage.getItem("message");
+    
+    // Set values in HTML elements
+    document.getElementById("fullName").innerHTML = title + " " + firstName + " " + lastName;
+    document.getElementById("dob").innerHTML = dob;
+    document.getElementById("telephone").innerHTML = telephone;
+    document.getElementById("fileUpload").innerHTML = fileUpload;
+    //document.getElementById("email").innerHTML = email;
+    document.getElementById("message").innerHTML = message;
+  </script>
+</body>
+</html>
